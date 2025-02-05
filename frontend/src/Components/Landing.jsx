@@ -30,7 +30,7 @@ export default function Landing() {
                 <div className="flex items-center space-x-4">
                   <BellIcon className="h-6 w-6 text-gray-500" />
                   <Link to="/Login" className='cursor-pointer'>
-                    <button onClick={() => setCurrentPage('login')}>
+                    <button>
                       <UserCircleIcon className="h-6 w-6 text-gray-500 cursor-pointer" />
                     </button>
                   </Link>

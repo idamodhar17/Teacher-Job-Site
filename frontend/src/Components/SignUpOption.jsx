@@ -15,7 +15,7 @@ export default function SignUpOption() {
             <h2 className="mt-6 text-3xl font-extrabold text-gray-900">Create Account</h2>
             <p className="mt-2 text-sm text-gray-600">
               Already have an account?{' '}
-              <button onClick={() => setCurrentPage('login')} className="font-medium text-blue-600 hover:text-blue-500">
+              <button className="font-medium text-blue-600 hover:text-blue-500">
                 Sign in
               </button>
             </p>
@@ -24,7 +24,6 @@ export default function SignUpOption() {
           <div className="mt-8 flex flex-col gap-5 ">
             <Link to="/TeacherSignUp" className='shadow-2xl'>
               <button
-                onClick={() => setCurrentPage('teacherSignup')}
                 className="w-full flex items-center justify-center px-4 py-4 border border-blue-600 rounded-lg shadow-sm text-lg font-medium text-blue-600 bg-white hover:bg-blue-50 transition duration-150"
               >
                 Sign up as a Teacher
@@ -32,7 +31,6 @@ export default function SignUpOption() {
             </Link>
             <Link to="/SchoolSignUp" className='shadow-2xl'>
               <button
-                onClick={() => setCurrentPage('schoolSignup')}
                 className="w-full  flex items-center justify-center px-4 py-4 border border-blue-600 rounded-lg shadow-sm text-lg font-medium text-white bg-blue-600 hover:bg-blue-700 transition duration-150"
               >
                 Sign up as a School

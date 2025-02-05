@@ -5,7 +5,9 @@ import Landing from './Components/Landing'
 import Login from './Components/Login'
 import SignUpOption from './Components/SignUpOption';
 import TeacherSignUp from './Components/TeacherSignUp';
-import SchoolSignUp from './Components/SchoolSignUp';
+import SchoolSignUp from './Components/SchoolSignup';
+import TeacherDashbord from './Components/TeacherDashbord';
+import SchoolDashbord from './Components/SchoolDashbord';
 
 function App() {
 
@@ -19,6 +21,8 @@ function App() {
                 <Route path='/SignUpOption' element={<SignUpOption/>} />
                 <Route path='/TeacherSignUp' element={<TeacherSignUp/>} />
                 <Route path='/SchoolSignUp' element={<SchoolSignUp/>} />
+                <Route path='/teacher-dashboard' element={<TeacherDashbord/>} />
+                <Route path='/school-dashboard' element={<SchoolDashbord/>} />
 
           </Routes>
 

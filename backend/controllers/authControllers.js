@@ -1,6 +1,9 @@
 const asyncHandler = require('express-async-handler');
 const User = require('../models/Users');
 const generateToken = require('../utils/generateToken');
+const jwt = require('jsonwebtoken');
+
+require('dotenv').config();
 
 const registerUser = asyncHandler(async (req, res) => {
   const { name, email, password, role } = req.body;
@@ -8,7 +11,7 @@ const registerUser = asyncHandler(async (req, res) => {
   const userExists = await User.findOne({ email });
 
   if (userExists) {
-    res.status(400);
+    res.status(400).json({ message: 'User already exists' }); 
     throw new Error('User already exists');
   }
 
@@ -32,6 +35,8 @@ const registerUser = asyncHandler(async (req, res) => {
     throw new Error('Invalid user data');
   }
 });
+
+
 
 const loginUser = asyncHandler(async (req, res) => {
   const { email, password } = req.body;
