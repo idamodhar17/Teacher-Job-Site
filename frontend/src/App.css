@@ -1,0 +1,87 @@
+@import url('https://fonts.googleapis.com/css2?family=Red+Hat+Text:ital,wght@0,300..700;1,300..700&display=swap');
+
+html{
+    scroll-behavior: smooth;
+}
+
+.bg-1{
+    animation: jmSpin 20s linear infinite;
+}
+
+@keyframes jmSpin {
+    50% {
+        transform: rotate(360deg);
+    }
+    100% {
+        transform: rotate(0);
+    }
+}
+
+.google-font{
+    font-family: "Inknut Antiqua", serif;
+}
+
+.red-hat{
+    font-family: "Red Hat Text", serif;
+}
+
+
+
+
+.overlay {
+    transition: opacity 0.5s ease-in-out;
+}
+
+.card:hover .card-img div,
+.card:hover .card-item {
+    transition: all 0.7s ease-in-out;
+}
+
+
+
+
+
+
+.card-img{
+    position: relative;
+}
+.overlay {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    /* height: 100%;
+    width: 100%; */
+    opacity: 0;
+    transition: .5s ease;
+    background-image: linear-gradient(90deg, rgba(3, 3, 255, 0.47) 0%, rgba(0, 0, 0, 0.338) 100%);
+    
+  }
+
+  .card:hover .overlay{
+    opacity: 1;
+    
+  }
+
+  .card:hover .card-img div{
+    margin-right: 10%;
+  }
+
+  .card:hover .card-item{
+    margin-left: 10%;
+  }
+
+.loading{
+    animation: loading 5s ease-in-out 0s 1  ;
+}
+
+@keyframes loading {
+    from{
+        width: 0%;
+    }    
+
+    to{
+        width: 100%;
+    }
+}
