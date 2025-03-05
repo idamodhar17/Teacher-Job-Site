@@ -1,9 +1,7 @@
 const express = require('express');
 const router = express.Router();
 const applicationController = require('../controllers/applicationController');
-const authMiddleware = require('../middleware/authMiddleware');
-const teacherMiddleware = require('../middleware/teacherMiddleware');
-const schoolMiddleware = require('../middleware/schoolMiddleware');
+const { authMiddleware, schoolMiddleware, teacherMiddleware } = require('../middleware/authMiddleware');
 
 router.post('/', authMiddleware, teacherMiddleware, applicationController.createApplication);
 router.get('/', authMiddleware, teacherMiddleware, applicationController.getApplicationsByTeacher);

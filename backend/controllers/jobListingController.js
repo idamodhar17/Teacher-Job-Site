@@ -1,5 +1,5 @@
 const JobListing = require('../models/JobListing');
-const User = require('../models/User');
+const User = require('../models/Users');
 
 exports.createJobListing = async (req, res) => {
   try {

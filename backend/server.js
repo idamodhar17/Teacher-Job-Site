@@ -1,5 +1,6 @@
 const express = require('express');
 const dotenv = require('dotenv');
+const cors = require('cors');
 const connectDB = require('./config/db');
 const authRoutes = require('./routes/authRoutes');
 const userRoutes = require('./routes/userRoutes');
@@ -7,10 +8,14 @@ const jobListingRoutes = require('./routes/jobListingRoutes');
 const applicationRoutes = require('./routes/applicationRoutes');
 
 dotenv.config();
-
 connectDB();
 
 const app = express();
+
+app.use(cors({
+  origin: 'http://localhost:5173',
+  credentials: true
+}));
 
 app.use(express.json());
 
