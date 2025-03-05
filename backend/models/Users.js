@@ -20,6 +20,34 @@ const UserSchema = new mongoose.Schema({
     enum: ['teacher', 'school', 'admin'],
     default: 'teacher',
   },
+
+  teacherDetails: {
+    subject: String,
+    gradeLevel: [String],
+    qualifications: String,
+    experience: Number,
+    bio: String,
+    contactNumber: String,
+    resume: String,
+  },
+  schoolDetails: {
+    schoolName: String,
+    address: {
+      street: String,
+      city: String,
+      state: String,
+      zipCode: String,
+    },
+    contactNumber: String,
+    website: String,
+    numberOfStudents: Number,
+    accreditation: String,
+  },
+  adminDetails: {
+    department: String,
+    responsibilities: [String],
+    contactNumber: String,
+  },
 });
 
 UserSchema.pre('save', async function (next) {

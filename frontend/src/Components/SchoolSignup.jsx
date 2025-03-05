@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 
 
 export default function SchoolSignUp() {
-    const [currentPage, setCurrentPage] = useState('main'); // 'main', 'login', 'teacherSignup', 'schoolSignup'
+    const [currentPage, setCurrentPage] = useState('main');
     const [showPassword, setShowPassword] = useState(false);
     const [showConfirmPassword, setShowConfirmPassword] = useState(false);
   return (

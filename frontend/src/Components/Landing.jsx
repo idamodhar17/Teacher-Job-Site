@@ -3,34 +3,23 @@ import { BriefcaseIcon, SearchIcon, BuildingIcon, MapPinIcon, MenuIcon, BellIcon
 import { Link } from 'react-router-dom';
 import '../Style/Landing.css'
 
-
-
 export default function Landing() {
-
   return (
     <>
       <div className="min-h-screen bg-gray-50">
 
-        <div className="grid lg:grid-cols-12 max-[700px]:grid-cols-2 max-[500px]:hidden  items-center px-20 py-3">
+        <div className="grid lg:grid-cols-6 max-[700px]:grid-cols-2 max-[500px]:hidden  items-center px-20 py-3">
           <div className="flex justify-center items-center md:col-span-2 gap-2">
             <i className="fa-solid fa-location-dot text-blue-600"></i>
             <p className="">Bangalore</p>
           </div>
 
-          <div className="flex justify-center items-center md:col-span-3 gap-2">
+          <div className="flex justify-end items-center md:col-span-3 gap-2">
             <i className="fa-regular fa-clock text-blue-600"></i>
             <p className="">Mon - Sat 8.00 - 18.00.</p>
 
           </div>
-
-          <div className="flex justify-evenly items-center md:col-end-12 max-[700px]:col-span-2  gap-4">
-            <i className="fa-brands fa-facebook-f text-blue-600 bg-white rounded-4xl p-3 transform duration-500 hover:bg-blue-500 hover:text-white"></i>
-            <i className="fa-brands fa-twitter text-blue-600 bg-white rounded-4xl p-3 transform duration-500 hover:bg-blue-500 hover:text-white"></i>
-            <i className="fa-brands fa-instagram text-blue-600 bg-white rounded-4xl p-3 transform duration-500 hover:bg-blue-500 hover:text-white"></i>
-            <i className="fa-brands fa-linkedin-in text-blue-600 bg-white rounded-4xl p-3 transform duration-500 hover:bg-blue-500 hover:text-white"></i>
-          </div>
         </div>
-
 
         {/* Navigation */}
         <nav className="bg-white shadow-sm ">
@@ -42,7 +31,7 @@ export default function Landing() {
               </div>
               <div className="hidden md:flex items-center space-x-8">
                 <a href="/Jobs" className="text-gray-700 hover:text-blue-600">Find Jobs</a>
-                <a href="#" className="text-gray-700 hover:text-blue-600">Unversitys</a>
+                <a href="#" className="text-gray-700 hover:text-blue-600">Schools</a>
                 <a href="#" className="text-gray-700 hover:text-blue-600">Post a Job</a>
                 <div className="flex items-center space-x-4">
                   <BellIcon className="h-6 w-6 text-gray-500" />
@@ -62,11 +51,7 @@ export default function Landing() {
 
         {/* Hero Section */}
         <div className="relative bg-white">
-          <div className="grid lg:grid-cols-2 max-[850px]:grid-cols-1 md:mx-20 ">
-            <div className="relative flex items-center justify-center max-[850px]:hidden " >
-              <img src="/Images/Bluebg.svg" alt="" className='absolute bg-1 w-96' />
-              {/* <img src="/Images/bg2.png" alt="" className="relative w-full" /> */}
-            </div>
+          <div className="grid max-[850px]:grid-cols-1 md:mx-20 ">
 
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24 justify-self-center">
               <div className="text-center">
